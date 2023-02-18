@@ -4,8 +4,9 @@ function getComputerChoice() {
     return choices[random];
 }
 
-function playGame(computerChoice, playerChoice) {
+function playRound(computerChoice, playerChoice) {
     computerChoice = getComputerChoice();
+    playerChoice = prompt("Choose between rock, paper and scissor")
     playerChoice = playerChoice.toLowerCase();
     if (computerChoice === playerChoice){
         return "It's a tie!"
@@ -17,5 +18,12 @@ function playGame(computerChoice, playerChoice) {
         return " You lost!"; 
     } else {
         return "You win!";
+    }
+}
+
+function game() {
+    playRound()
+    for (let i = 0; i < 5; i++) {
+
     }
 }
